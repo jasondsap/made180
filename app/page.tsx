@@ -9,6 +9,7 @@ import {
   Activity, CalendarCheck, Send, User, BookHeart, Star, Lock,
   Briefcase, FileCheck, Volume2, ClipboardList, PenTool, Award
 } from 'lucide-react';
+import AdvisorDemo from './AdvisorDemo';
 
 /* ─── Data ──────────────────────────────────────────────────── */
 
@@ -957,6 +958,9 @@ export default function MADE180Site() {
           </div>
         </div>
       </footer>
+
+      {/* Floating Peer Advisor Demo */}
+      <AdvisorDemo />
     </div>
   );
 }
