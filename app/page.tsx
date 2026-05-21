@@ -952,8 +952,8 @@ export default function MADE180Site() {
           <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4" style={{ borderColor: 'rgba(11,29,46,0.06)' }}>
             <p className="text-sm" style={{ color: 'var(--text-light)' }}>© 2026 MADE180 Digital Solutions. All rights reserved.</p>
             <div className="flex gap-6 text-sm" style={{ color: 'var(--text-light)' }}>
-              <a href="#" className="hover:underline">Privacy Policy</a>
-              <a href="#" className="hover:underline">Terms of Service</a>
+              <a href="/sms-privacy" className="hover:underline">SMS Privacy</a>
+              <a href="/sms-terms" className="hover:underline">SMS Terms</a>
             </div>
           </div>
         </div>
