@@ -59,7 +59,7 @@ export default function SmsPrivacyPage() {
         <li>Your first and last name</li>
         <li>The date, time, and content of messages exchanged</li>
         <li>Your responses to messages (including opt-out requests)</li>
-        <li>Information you submit through links contained in our messages (such as self-assessment forms, appointment confirmations, or web portal logins)</li>
+        <li>Information you submit through links contained in our messages (such as consent forms, self-assessment questionnaires, or information-update forms)</li>
         <li>Information provided by the program sponsor as part of your enrollment in the underlying program</li>
       </UL>
       <P>We do not collect mobile information from minors without parental or legal guardian consent where required by law.</P>
@@ -69,7 +69,7 @@ export default function SmsPrivacyPage() {
       <H2>3. How We Use Your Information</H2>
       <P>We use the information we collect to:</P>
       <UL>
-        <li>Send you the messages you have opted into (appointment reminders, program notifications, self-assessment invitations, care coordination updates, and similar program-related communications)</li>
+        <li>Send you the messages you have opted into (consent and Release-of-Information requests, self-assessment invitations, participant information updates, care coordination messages, and similar program-related communications)</li>
         <li>Operate the underlying program on behalf of the sponsor</li>
         <li>Respond to your requests for help (HELP keyword) and opt-out (STOP keyword)</li>
         <li>Maintain records of consent and communication as required by law</li>
@@ -96,7 +96,7 @@ export default function SmsPrivacyPage() {
       <P>You may also opt out by contacting us using the information in Section 11.</P>
       <P>For help, reply <strong>HELP</strong> to any message you receive, or contact us using the information in Section 11.</P>
       <P>
-        Opting out of SMS does not opt you out of the underlying program. If you are enrolled in a court-referred or treatment program operated through a MADE180 SMS service, opting out of SMS may affect your ability to receive timely reminders and notifications, but does not remove you from the program itself. Contact the program sponsor for questions about non-SMS communication options.
+        Opting out of SMS does not opt you out of the underlying program. If you are enrolled in a court-referred or treatment program operated through a MADE180 SMS service, opting out of SMS may affect your ability to receive timely program messages, but does not remove you from the program itself. Contact the program sponsor for questions about non-SMS communication options.
       </P>
 
       <HR />
@@ -201,7 +201,7 @@ export default function SmsPrivacyPage() {
                 Fletcher Group, Inc. (FGI)
               </td>
               <td className="p-3 border align-top" style={{ borderColor: 'rgba(11,29,46,0.08)' }}>
-                Court-referred behavioral health program serving participants in Kentucky. SMS used for appointment reminders, self-assessment invitations, milestone notifications, and care coordination.
+                Court-referred behavioral health program serving participants in Kentucky. SMS used for consent and Release-of-Information requests, self-assessment invitations (e.g., BARC-10, PHQ-9/GAD-7), participant information updates, and care coordination.
               </td>
               <td className="p-3 border align-top" style={{ borderColor: 'rgba(11,29,46,0.08)' }}>
                 1–4 messages per week per participant

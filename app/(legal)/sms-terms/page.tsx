@@ -41,9 +41,9 @@ export default function SmsTermsPage() {
       <H2>1. Description of Service</H2>
       <P>MADE180 SMS programs deliver program-related text messages to participants who have opted in. Depending on the specific program, messages may include:</P>
       <UL>
-        <li>Appointment and check-in reminders</li>
-        <li>Invitations to complete self-assessment forms via secure web links</li>
-        <li>Program milestone notifications</li>
+        <li>Consent and Release-of-Information (ROI) requests</li>
+        <li>Invitations to complete self-assessment check-ins via secure web links</li>
+        <li>Participant information (demographic/contact) update requests</li>
         <li>Care coordination updates</li>
         <li>Program status updates</li>
         <li>Responses to your HELP and STOP requests</li>
@@ -65,8 +65,9 @@ export default function SmsTermsPage() {
       <H2>3. Opt-In</H2>
       <P>You opt in to a MADE180 SMS program by one or more of the following methods, depending on the program:</P>
       <UL>
-        <li>Signing a written consent form at program intake</li>
-        <li>Completing a web form on a Program Sponsor&rsquo;s intake portal</li>
+        <li>Providing your mobile number to program staff at intake and verbally agreeing to receive text messages</li>
+        <li>Confirming your consent on a secure web page linked from a text message we send to the number you provided</li>
+        <li>Signing a written consent form at program intake (where applicable)</li>
         <li>Other opt-in methods specifically disclosed by the program at the time of enrollment</li>
       </UL>
       <P>
@@ -88,7 +89,7 @@ export default function SmsTermsPage() {
         If you opt out and later wish to receive messages again, you must re-enroll through the program&rsquo;s intake process. Replying START or UNSTOP is not sufficient to re-enroll.
       </P>
       <P>
-        <strong>Important:</strong> Opting out of SMS does not remove you from the underlying program (for example, a court-referred treatment program). If you are enrolled in such a program, contact the Program Sponsor for non-SMS communication options. Opting out of SMS reminders may affect your ability to receive timely notifications about appointments, deadlines, or program requirements.
+        <strong>Important:</strong> Opting out of SMS does not remove you from the underlying program (for example, a court-referred treatment program). If you are enrolled in such a program, contact the Program Sponsor for non-SMS communication options. Opting out of SMS may affect your ability to receive timely notifications about deadlines or program requirements.
       </P>
 
       <HR />
@@ -213,7 +214,7 @@ export default function SmsTermsPage() {
                 Fletcher Group, Inc. (FGI)
               </td>
               <td className="p-3 border align-top" style={{ borderColor: 'rgba(11,29,46,0.08)' }}>
-                Court-referred behavioral health program serving participants in Kentucky. SMS used for appointment reminders, self-assessment invitations, milestone notifications, and care coordination.
+                Court-referred behavioral health program serving participants in Kentucky. SMS used for consent and Release-of-Information requests, self-assessment invitations (e.g., BARC-10, PHQ-9/GAD-7), participant information updates, and care coordination.
               </td>
               <td className="p-3 border align-top" style={{ borderColor: 'rgba(11,29,46,0.08)' }}>
                 1–4 messages per week per participant
