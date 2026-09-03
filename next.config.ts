@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        // Short URL printed on the Kentucky Recovery Rally QR code
+        source: '/rally',
+        destination: '/made180/KentuckyRecoveryRally',
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -57,8 +57,8 @@ function getDocColor(docName: string): { bg: string; text: string } {
 
 /* ─── Component ─────────────────────────────────────────────── */
 
-export default function AdvisorDemo() {
-  const [open, setOpen] = useState(false);
+export default function AdvisorDemo({ inline = false }: { inline?: boolean }) {
+  const [open, setOpen] = useState(inline);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -71,10 +71,10 @@ export default function AdvisorDemo() {
   }, [messages, loading]);
 
   useEffect(() => {
-    if (open && inputRef.current) {
+    if (open && !inline && inputRef.current) {
       inputRef.current.focus();
     }
-  }, [open]);
+  }, [open, inline]);
 
   useEffect(() => {
     if (inputRef.current) {
@@ -149,7 +149,7 @@ export default function AdvisorDemo() {
   return (
     <>
       {/* Floating button */}
-      {!open && (
+      {!inline && !open && (
         <button
           onClick={() => setOpen(true)}
           className="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 pl-5 pr-6 py-3.5 rounded-full shadow-xl transition-all hover:scale-105 hover:shadow-2xl"
@@ -162,7 +162,14 @@ export default function AdvisorDemo() {
 
       {/* Chat panel */}
       {open && (
-        <div className="fixed bottom-6 right-6 z-50 w-[420px] max-w-[calc(100vw-2rem)] h-[600px] max-h-[calc(100vh-3rem)] rounded-2xl shadow-2xl overflow-hidden flex flex-col" style={{ background: '#fafaf8', border: '1px solid rgba(11,29,46,0.1)' }}>
+        <div
+          className={
+            inline
+              ? 'relative w-full h-[560px] max-h-[80vh] rounded-2xl shadow-lg overflow-hidden flex flex-col'
+              : 'fixed bottom-6 right-6 z-50 w-[420px] max-w-[calc(100vw-2rem)] h-[600px] max-h-[calc(100vh-3rem)] rounded-2xl shadow-2xl overflow-hidden flex flex-col'
+          }
+          style={{ background: '#fafaf8', border: '1px solid rgba(11,29,46,0.1)' }}
+        >
           {/* Header */}
           <div className="flex items-center justify-between px-5 py-4 border-b" style={{ background: 'var(--navy)', borderColor: 'rgba(255,255,255,0.06)' }}>
             <div className="flex items-center gap-3">
@@ -180,9 +187,11 @@ export default function AdvisorDemo() {
               <span className="text-[10px] px-2 py-0.5 rounded-full font-medium" style={{ background: 'rgba(42,181,160,0.15)', color: '#30B27A' }}>
                 Live Demo
               </span>
-              <button onClick={() => setOpen(false)} className="p-1.5 rounded-lg transition-colors hover:bg-white/10">
-                <X className="w-4 h-4 text-white/60" />
-              </button>
+              {!inline && (
+                <button onClick={() => setOpen(false)} className="p-1.5 rounded-lg transition-colors hover:bg-white/10">
+                  <X className="w-4 h-4 text-white/60" />
+                </button>
+              )}
             </div>
           </div>
 
