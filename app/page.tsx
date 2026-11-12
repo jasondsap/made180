@@ -7,7 +7,7 @@ import {
   Clock, CheckCircle2, Sparkles, BarChart3, Building2, Heart,
   MessageSquare, FileText, Target, Mic, ClipboardCheck, TrendingUp,
   Activity, CalendarCheck, Send, User, BookHeart, Star, Lock,
-  Briefcase, FileCheck, Volume2, ClipboardList, PenTool, Award
+  Briefcase, FileCheck, ClipboardList, PenTool, Award
 } from 'lucide-react';
 import AdvisorDemo from './AdvisorDemo';
 
@@ -21,7 +21,7 @@ const pssTools = [
   { icon: Target, title: 'Goal Generator', description: 'Personalized SMART goals with AI recommendations based on recovery capital assessment results.', color: '#30B27A' },
   { icon: CalendarCheck, title: 'Service Planner', description: 'Plan and track service delivery with scheduling, completion workflows, and calendar integration.', color: '#1A73A8' },
   { icon: Activity, title: 'Journey Tracker', description: 'Track non-linear recovery progress across six life domains. Normalize setbacks as part of the process.', color: '#00BCD4' },
-  { icon: BarChart3, title: 'Peer Advisor', description: 'Voice-based AI companion for guidance, supervision scenarios, and professional development support.', color: '#EC4899' },
+  { icon: BarChart3, title: 'Peer Advisor', description: 'AI chat companion for guidance, supervision scenarios, and professional development support.', color: '#EC4899' },
 ];
 
 const pssPortalFeatures = [
@@ -36,23 +36,23 @@ const wriModules = [
   {
     icon: ClipboardList,
     title: 'Readiness Assessment',
-    description: '75-question evaluation across 10 life domains — Basic Stability, Transportation, Legal & ID, Recovery, Mental Health, Physical Health, Routine, Work Skills, Job Search, and Support System. Generates a personalized WRI score with a 30-day action plan.',
+    description: 'The Workforce Readiness Index: 66 questions across 9 life domains — Basic Stability, Legal & ID, Recovery, Mental Health, Physical Health, Routine, Work Skills, Job Search, and Support System. It produces a 0–100 score and a 30-day action plan that becomes goals on the participant\'s record.',
     color: '#1A73A8',
-    highlights: ['0–100 readiness scoring', 'Critical barrier checks', 'Auto 30-day action plan', 'Save & resume anytime'],
+    highlights: ['0–100 readiness scoring', 'Critical barrier checks', '30-day action plan', 'Taken together or sent by link'],
   },
   {
     icon: PenTool,
     title: 'Resume Builder',
-    description: 'Guided 7-step builder with 5 professional templates and AI-powered suggestions for strength-based language, employment gap explanation, and transferable skills identification.',
+    description: 'A coordinator and participant build the resume together, starting from the work history, skills, and certifications already on the intake. AI turns the participant\'s own words into strong resume lines, checks the resume against a job posting, and drafts the cover letter.',
     color: '#30B27A',
-    highlights: ['AI phrase suggestions', 'Job description matcher', 'Gap explanation help', 'Live preview & PDF export'],
+    highlights: ['Starts from the intake', 'Questions by link for remote participants', 'Job match and ATS check', 'PDF saved to the participant\'s file'],
   },
   {
-    icon: Volume2,
-    title: 'Interview Practice',
-    description: 'Realistic AI mock interviews using voice technology. Speak naturally and get scored across 5 competencies — Confidence, Clarity, Emotional Regulation, Engagement, and Professional Tone.',
+    icon: Building2,
+    title: 'Employment & Retention',
+    description: 'Employer partners, job placements, and training enrollments live on the same participant record, with retention check-ins after each hire and a barrier log that shows what stood in the way of work and when it was cleared.',
     color: '#8B5CF6',
-    highlights: ['4 career pathways', 'Voice AI interaction', '5 competency scoring', 'Detailed feedback'],
+    highlights: ['Employer partner tracking', 'Job placements and training', 'Retention check-ins', 'Barriers and milestones'],
   },
 ];
 
@@ -331,7 +331,7 @@ export default function MADE180Site() {
         <div className="marquee-track">
           {[0, 1].map((r) => (
             <div key={r} className="flex items-center gap-16 shrink-0">
-              {['Peer Support Studio', 'Workforce Readiness Hub', 'SLCM', 'Recovery Housing Programs', 'Behavioral Health Organizations', 'Peer Support Studio', 'Workforce Readiness Hub', 'SLCM', 'Recovery Housing Programs', 'Behavioral Health Organizations'].map((name, i) => (
+              {['Peer Support Studio', 'Workforce Programs', 'SLCM', 'Recovery Housing Programs', 'Behavioral Health Organizations', 'Peer Support Studio', 'Workforce Programs', 'SLCM', 'Recovery Housing Programs', 'Behavioral Health Organizations'].map((name, i) => (
                 <span key={`${r}-${i}`} className="text-sm font-medium whitespace-nowrap tracking-wide" style={{ color: 'var(--text-light)' }}>
                   {name}
                 </span>
@@ -539,7 +539,7 @@ export default function MADE180Site() {
                     </div>
                     <div>
                       <p className="text-[10px] font-semibold" style={{ color: 'var(--navy)' }}>HIPAA Compliant</p>
-                      <p className="text-[9px]" style={{ color: 'var(--text-light)' }}>End-to-end encrypted</p>
+                      <p className="text-[9px]" style={{ color: 'var(--text-light)' }}>Encrypted in transit and at rest</p>
                     </div>
                   </div>
                 </div>
@@ -559,25 +559,25 @@ export default function MADE180Site() {
           </div>
           </div>
 
-          {/* ── WORKFORCE READINESS HUB ──────────────────────── */}
+          {/* ── PEER SUPPORT STUDIO: WORKFORCE MODULE ────────── */}
           <div>
             <div className="flex items-center gap-3 mb-10">
               <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #E85D3A, #F59E0B)' }}>
                 <Briefcase className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-white">Workforce Readiness Hub</h3>
-                <p className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>Helping individuals in recovery return to the workforce</p>
+                <h3 className="text-2xl font-bold text-white">Workforce Readiness</h3>
+                <p className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>A module of Peer Support Studio for programs helping people in recovery return to work</p>
               </div>
             </div>
 
             {/* WRI Stats */}
             <div className="flex flex-wrap gap-8 mb-10">
               {[
-                { v: '75', l: 'Assessment Questions' },
-                { v: '10', l: 'Life Domains' },
-                { v: '4', l: 'Career Pathways' },
-                { v: '3', l: 'Integrated Modules' },
+                { v: '66', l: 'Assessment Questions' },
+                { v: '9', l: 'Life Domains' },
+                { v: '30', l: 'Day Action Plan' },
+                { v: '1', l: 'Participant Record' },
               ].map((s, i) => (
                 <div key={i}>
                   <div className="text-3xl font-bold text-white">{s.v}</div>
@@ -621,9 +621,9 @@ export default function MADE180Site() {
             >
               <div className="flex flex-col sm:flex-row items-center gap-6">
                 {[
-                  { num: '1', label: 'Assess', desc: 'Take the Readiness Assessment' },
-                  { num: '2', label: 'Build', desc: 'Create a recovery-friendly resume' },
-                  { num: '3', label: 'Practice', desc: 'AI mock interviews with feedback' },
+                  { num: '1', label: 'Assess', desc: 'Score readiness and surface barriers' },
+                  { num: '2', label: 'Build', desc: 'Write the resume together' },
+                  { num: '3', label: 'Place', desc: 'Track the job and retention' },
                 ].map((step, i) => (
                   <div key={i} className="flex items-center gap-3">
                     {i > 0 && <ArrowRight className="w-4 h-4 hidden sm:block" style={{ color: 'rgba(255,255,255,0.2)' }} />}
@@ -640,13 +640,11 @@ export default function MADE180Site() {
                 ))}
               </div>
               <a
-                href="https://workforce-readiness.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#contact"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all hover:scale-105 shrink-0"
                 style={{ background: 'var(--orange)', color: 'white' }}
               >
-                Visit Workforce Readiness Hub <ArrowUpRight className="w-4 h-4" />
+                Ask about the workforce module <ArrowRight className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -930,7 +928,6 @@ export default function MADE180Site() {
                 <li><a href="https://peersupportstudio.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:underline" style={{ color: 'var(--text-mid)' }}>Peer Support Studio</a></li>
                 <li><a href="https://app.peersupportstudio.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:underline" style={{ color: 'var(--text-mid)' }}>PSS App</a></li>
                 <li><a href="https://my.peersupportstudio.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:underline" style={{ color: 'var(--text-mid)' }}>Participant Portal</a></li>
-                <li><a href="https://workforce-readiness.vercel.app" target="_blank" rel="noopener noreferrer" className="text-sm hover:underline" style={{ color: 'var(--text-mid)' }}>Workforce Readiness Hub</a></li>
               </ul>
             </div>
             <div>
